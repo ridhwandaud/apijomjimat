@@ -17,6 +17,8 @@ class CalendarsController extends Controller
 			$pieces = explode(" ", $date);
 
 			$event->start = $pieces[0] . "T" . $pieces[1];
+
+			$event->url = "/events/" . $event->id;
 		}
 
     	return $events;

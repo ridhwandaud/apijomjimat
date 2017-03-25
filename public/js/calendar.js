@@ -23,7 +23,14 @@ $(document).ready(function() {
 	    // ],
 
 	   events: '/get/events',
-	   eventColor: '#378006'
+	   eventColor: '#378006',
+
+	   eeventClick: function(event) {
+	        if (event.url) {
+	            window.open(event.url);
+	            return false;
+	        }
+	    }
 
     })
 
