@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div id='calendar'></div>
+	<div class="col-md-8">
+		<div id='calendar'></div>
+	</div>
+    
 </div>
 @endsection

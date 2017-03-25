@@ -28,6 +28,11 @@ class CalendarsController extends Controller
 
     	$events = Event::whereDate("event_date", '=', $day)->get();
 
+    	// transform to view
+    	$date = new Carbon($day);
+    	$events->day = $date->toFormattedDateString();
+    	$events->date = $day;
+
     	foreach ($events as $event) {
     		$format = new Carbon($event->event_date);
     		$date = $format->toFormattedDateString();

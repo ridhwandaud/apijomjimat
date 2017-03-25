@@ -17,6 +17,8 @@ class EventsController extends Controller
 
     	$events = Event::all();
 
+        $events->date = new Carbon();
+
     	foreach ($events as $event) {
     		$format = new Carbon($event->event_date);
     		$date = $format->diffForHumans();
@@ -41,7 +43,7 @@ class EventsController extends Controller
 
     	Event::create(request(['description','event_date','amount']));
 
-    	return redirect('/events');
+    	return redirect()->back();
 
     }
 
