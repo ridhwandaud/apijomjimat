@@ -2,13 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="col-md-6">
-    	@include('partials.create')
-
-    	@include('layouts.errors')    	
-    	
-    </div>
-
+    
     <div class="col-md-6">
     	<div class="list-group">
     	@foreach($events as $event)
@@ -30,5 +24,12 @@
     	@endforeach
     	</div>
     </div>
+    <div class="col-md-6">
+    	@include('partials.create')
+
+    	@include('layouts.errors')    	
+    	
+    </div>
+
 </div>
 @endsection

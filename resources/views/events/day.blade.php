@@ -23,12 +23,20 @@
     		@endforeach
     	</div>
     	@else
-    	
-			<p>Events is empty</p>
-    	@endif	
-	</div>
-	<div class="col-md-6">
-		@include('partials.create')
+		<div class="row">
+			<div class="col-md-12">
+				<p>Events is empty</p>
+			</div>
+		</div>
+			
+    	@endif
+    	<div class="row">
+    		<div class="col-md-12">
+    			@include('partials.create')
+    			@include('layouts.errors')    
+    		</div>
+    		
+    	</div>	
 	</div>
 </div>
 
