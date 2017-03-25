@@ -6,22 +6,23 @@ $(document).ready(function() {
 
     	 events: [
 	        {
-	            title  : 'RM10 Nasi Lemak + Teh Ais',
-	            start  : '2017-03-03T09:00:00'
+	            title  : 'RM 5',
+	            start  : '2017-03-03T09:00:00',
+	            color  : '#f34141',
+	            description: 'This is a cool event'
 	        },
 	        {
-	            title  : 'event2',
-	            start  : '2010-01-05',
-	            end    : '2010-01-07'
+	            title  : 'RM 10',
+	            start  : '2017-03-03T13:00:00'
 	        },
 	        {
-	            title  : 'event3',
-	            start  : '2017-03-09T12:30:00',
-	            allDay : false // will make the time show
+	            title  : 'RM 3',
+	            start  : '2017-03-03T20:00:00',
+	            color  : '#000'
 	        }
 	    ],
 
-	    // events: '/show/booking'
+	   // events: '/api/events',
 	   eventColor: '#378006'
 
     })

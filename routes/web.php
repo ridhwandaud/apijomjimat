@@ -23,4 +23,6 @@ Route::get('/events','EventsController@index');
 
 Route::get('/events/{event}','EventsController@show');
 
+Route::get('/delete/{event}','EventsController@destroy');
+
 Route::post('/events','EventsController@store');

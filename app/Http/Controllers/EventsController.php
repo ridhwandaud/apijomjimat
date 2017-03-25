@@ -17,12 +17,21 @@ class EventsController extends Controller
 
     	$events = Event::all();
 
+    	foreach ($events as $event) {
+    		$format = new Carbon($event->event_date);
+    		$date = $format->diffForHumans();
+			$event->event_date = $date;
+		}
+    	
+
     	return view('events.index',compact('events'));
     }
 
     public function store(Request $request){
 
     	// Validate 
+
+    	// return $request->event_date;
 
     	$this->validate(request(),[
     		'description' => 'required',
@@ -42,4 +51,14 @@ class EventsController extends Controller
 
     	return view('events.show',compact('event'));
     }
+
+    public function destroy($id){
+    	$event = Event::find($id);
+
+		$event->delete();
+
+		return redirect('/events');
+
+    }
 }
+

@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/packages/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="/packages/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 
     <!-- Scripts -->
     <script>
@@ -88,5 +89,7 @@
     <script src="/packages/jquery/dist/jquery.min.js"></script>
     <script src="/packages/moment/min/moment.min.js"></script>
     <script src="/packages/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="/packages/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="{{ asset('js/datepicker.js') }}"></script>
 </body>
 </html>
