@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
-
+use Carbon\Carbon;
 class CalendarsController extends Controller
 {
     public function getEvents(){
@@ -22,5 +22,19 @@ class CalendarsController extends Controller
 		}
 
     	return $events;
+    }
+
+    public function getDay($day){
+
+    	$events = Event::whereDate("event_date", '=', $day)->get();
+
+    	foreach ($events as $event) {
+    		$format = new Carbon($event->event_date);
+    		$date = $format->toFormattedDateString();
+			$event->event_date = $date;
+		}
+
+    	return view('events.day',compact('events'));
+
     }
 }

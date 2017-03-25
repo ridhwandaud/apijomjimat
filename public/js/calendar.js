@@ -25,12 +25,20 @@ $(document).ready(function() {
 	   events: '/get/events',
 	   eventColor: '#378006',
 
-	   eeventClick: function(event) {
+	   eventClick: function(event) {
 	        if (event.url) {
-	            window.open(event.url);
+	            window.open(event.url,'_self');
 	            return false;
 	        }
+	    },
+	    dayClick: function(date, jsEvent, view) {
+
+	        console.log('Clicked on: ' + date.format());
+
+	        window.open('/get/events/' + date.format(),'_self');
+
 	    }
+
 
     })
 

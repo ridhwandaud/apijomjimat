@@ -29,3 +29,5 @@ Route::post('/events','EventsController@store');
 
 
 Route::get('/get/events','CalendarsController@getEvents');
+
+Route::get('/get/events/{day}','CalendarsController@getDay');

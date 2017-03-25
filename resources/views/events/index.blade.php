@@ -45,7 +45,6 @@
 				<p>{{$event->description}}</p>
 				<p>{{$event->event_date}}</p>
 				<p>RM {{$event->amount}}</p>
-				<p>{{$event->created_at->toFormattedDateString()}}</p>
 				<span class="pull-right">
 					<a href="/events/{{$event->id}}">
 						<button class="btn btn-xs btn-info">Edit</button>
