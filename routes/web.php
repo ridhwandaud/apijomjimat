@@ -26,3 +26,6 @@ Route::get('/events/{event}','EventsController@show');
 Route::get('/delete/{event}','EventsController@destroy');
 
 Route::post('/events','EventsController@store');
+
+
+Route::get('/get/events','CalendarsController@getEvents');
