@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-	<div class="col-md-8">
+	<div class="col-md-10">
 		<div id='calendar'></div>
 	</div>
     

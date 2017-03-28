@@ -42,4 +42,12 @@ class CalendarsController extends Controller
     	return view('events.day',compact('events'));
 
     }
+
+    // public function getHolidays(){
+
+    //     $events = 
+
+    //     return $events;
+
+    // }
 }
