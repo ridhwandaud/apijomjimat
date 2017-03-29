@@ -19,11 +19,11 @@ class EventsController extends Controller
 
         $events->date = new Carbon();
 
-    	foreach ($events as $event) {
-    		$format = new Carbon($event->event_date);
-    		$date = $format->diffForHumans();
-			$event->event_date = $date;
-		}
+  //   	foreach ($events as $event) {
+  //   		$format = new Carbon($event->event_date);
+  //   		$date = $format->diffForHumans();
+		// 	$event->event_date = $date;
+		// }
     	
 
     	return view('events.index',compact('events'));

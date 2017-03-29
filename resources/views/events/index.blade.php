@@ -8,7 +8,7 @@
     	@foreach($events as $event)
     		<li class="list-group-item clearfix">
 				<p>{{$event->description}}</p>
-				<p>{{$event->event_date}}</p>
+				<p>{{$event->event_date->diffForHumans()}}</p>
 				<p>RM {{$event->amount}}</p>
 				<span class="pull-right">
 					<a href="/events/{{$event->id}}">
